@@ -1,0 +1,6 @@
+CACHE MANIFEST
+#Ressources à mettre en CACHE
+CACHE:
+index.html
+index.umd.js
+appcache-polyfill-window.js

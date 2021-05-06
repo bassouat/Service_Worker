@@ -1,4 +1,4 @@
-importScripts('/path/to/appcache-polyfill-sw/build/index.umd.js');
+importScripts('index.umd.js');
 
 self.addEventListener('fetch', (event) => {
   // Alternatively, examine event.request and only use the

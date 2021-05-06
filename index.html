@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html manifest="example.appcache" lang="en">
+    <header>
 <title>Test_Service-Worker</title>
-    </head>
+    </header>
 <body>
-
+<p>bnnhhh</p>
 </body>
-<script>
-    import {init} from '/path/to/appcache-polyfill-window/build/appcache-polyfill-window.js';
+<script src="appcache-polyfill-window.js">
+    
+        
 
 // Optional: define a callback that runs whenever caches are updated.
 // This is *rough* replacement for listening for AppCache updates.
@@ -20,4 +21,7 @@ init({
   cachePopulatedCallback: myCachePopulatedCallback,
 }).then(() => navigator.serviceWorker.register('sw.js'));
 </script>
+<footer>
+    <a style="color : blue ;" href="info.html">Info</a>
+</footer>
 </html>
