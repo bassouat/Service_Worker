@@ -5,22 +5,25 @@
     </header>
 <body>
 <p>bnnhhh</p>
-</body>
-<script src="appcache-polyfill-window.js">
+<!-- <script src="appcache-polyfill-window.js"></script> -->
     
-        
+<script type="module">
+import {init} from './appcache-polyfill-window.js'   
 
 // Optional: define a callback that runs whenever caches are updated.
 // This is *rough* replacement for listening for AppCache updates.
 function myCachePopulatedCallback(urls) {
   // urls is an array of updated URLs
   // Your logic goes here.
+  console.log(urls);
 }
 
 init({
   cachePopulatedCallback: myCachePopulatedCallback,
 }).then(() => navigator.serviceWorker.register('sw.js'));
 </script>
+</body>
+
 <footer>
     <a style="color : blue ;" href="info.html">Info</a>
 </footer>
