@@ -4,3 +4,8 @@ CACHE:
 #index.html
 index.umd.js
 appcache-polyfill-window.js
+
+NETWORK:
+*
+FALLBACK:
+fallback.html
