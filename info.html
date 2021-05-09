@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html manifest="example.appcache" lang="en">
     <header>
         <p>Ceci est un test pour le appcache</p>
     </header>
@@ -7,5 +7,21 @@
         <div>
             TIBCO
         </div>
+           
+<script type="module">
+    import {init} from './appcache-polyfill-window.js'   
+    
+    // Optional: define a callback that runs whenever caches are updated.
+    // This is *rough* replacement for listening for AppCache updates.
+    function myCachePopulatedCallback(urls) {
+      // urls is an array of updated URLs
+      // Your logic goes here.
+      console.log(urls);
+    }
+    
+    init({
+      cachePopulatedCallback: myCachePopulatedCallback,
+    }).then(() => navigator.serviceWorker.register('sw.js'));
+    </script>
     </body>
 </html>
